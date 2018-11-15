@@ -1,0 +1,27 @@
+{
+  "name": "test01",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "ajax-request": "^1.2.3",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ejs": "~2.5.7",
+    "eos-wallet": "^0.1.0",
+    "eosjs": "^16.0.9",
+    "express": "~4.16.0",
+    "http": "0.0.0",
+    "http-errors": "~1.6.2",
+    "jquery": "^3.3.1",
+    "morgan": "~1.9.0",
+    "mysql": "^2.16.0",
+    "node-fresh": "0.0.1",
+    "querystring": "^0.2.0",
+    "request": "^2.88.0",
+    "text-encoding": "^0.7.0"
+  }
+}
