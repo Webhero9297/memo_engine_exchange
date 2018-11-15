@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  
+  <script>
+    console.log(<%- JSON.stringify(eosObj) %>)
+  </script>
+  
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <button type="button" onclick="doOnGetAccount()">Account</button>
+
+    <button type="button" onclick="doOnGetAddress()">Get Address</button>
+    <button type="button" onclick="doOnGetBalance()">Get Balance</button>
+    <button type="button" onclick="doOnGetBankroll()">Get Bankroll</button>
+  </body>
+</html>
+
+<script>
+function doOnGetAccount() {
+  $.post('/api/v1/eos/exchange_address/account', {uid: '12345', email: 'webhero92971@mail.com'}, function(resp){
+    console.log(resp);
+  });
+}
+function doOnGetAddress() {
+  $.get('/api/v1/eos/exchange_address/address', {uid: '12345'}, function(resp){
+    console.log(resp);
+  });
+}
+function doOnGetBalance() {
+  $.get('/api/v1/eos/exchange_address/balance', {uid: '12345'}, function(resp){
+    console.log(resp);
+  });
+}
+function doOnGetBankroll() {
+  $.get('/api/v1/eos/exchange_address/bankroll', function(resp){
+    console.log(resp);
+  });
+}
+</script>
